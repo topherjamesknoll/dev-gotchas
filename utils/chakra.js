@@ -50,12 +50,20 @@ const theme = extendTheme({
       p: {
         mb: 4,
       },
+      pre: {
+        bg: "gray.100",
+        p: 4,
+        mb: 4,
+      },
+      code: {
+        fontFamily: "anonymous-pro, monospace",
+        color: "primary.500",
+      },
     },
   },
   fonts: {
     heading: "transducer, sans-serif",
     body: "transducer, sans-serif",
-    mono: "anonymous-pro, monospace",
   },
   fontSizes: {
     "4xl": "2rem", // Heading/h2
