@@ -1,32 +1,27 @@
 import { Container, Text } from "@chakra-ui/react";
+import axios from "axios";
 
-export default function Home() {
+export async function getStaticProps() {
+  const posts = await axios
+    .get("https://public-api.wordpress.com/rest/v1.1/sites/220124193/posts")
+    .then((response) => response.data.posts);
+
+  return {
+    props: { posts },
+  };
+}
+
+export default function Home({ posts }) {
+  console.log(posts);
   return (
     <Container max={"container.sm"} py={16}>
       <Text fontWeight={"bold"}>Developer Gotchas</Text>
-      <h1>Firebase Storage and NextJS</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-        harum illum ipsum modi nihil omnis provident quidem soluta. Animi
-        corporis cupiditate doloremque dolorum esse maxime porro provident
-        soluta vel? Cum.
-      </p>
-      <h2>Heading</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at aut
-        deleniti dignissimos dolorum, exercitationem, impedit maiores nam nihil
-        non odio optio pariatur perspiciatis ratione rerum sit, vitae.
-        Repudiandae, veritatis!
-      </p>
-      <pre>
-        <code>node --version</code>
-      </pre>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-        assumenda, at consectetur corporis cum cumque eaque eius enim esse
-        laudantium molestias natus nemo optio placeat quasi, qui quibusdam quo
-        voluptate!
-      </p>
+      {posts.map((post) => (
+        <>
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </>
+      ))}
     </Container>
   );
 }
