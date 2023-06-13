@@ -1,9 +1,13 @@
-import { Button } from "@carbon/react";
+import { Button, Column, FlexGrid, Row } from "@carbon/react";
 
 export default function Home() {
   return (
-    <>
-      <Button>asdf</Button>
-    </>
+    <FlexGrid>
+      <Row>
+        <Column>
+          <Button>Asdf</Button>
+        </Column>
+      </Row>
+    </FlexGrid>
   );
 }
