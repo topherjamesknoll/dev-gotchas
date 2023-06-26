@@ -41,20 +41,48 @@ export default function Home({ posts }) {
         <SimpleGrid columns={3}>
           <GridItem colSpan={[3, 1]}>
             {posts.map((post) => (
-              <Link as={NextLink} href={`#${post.slug}`} key={post.ID}>
+              <Link
+                as={NextLink}
+                href={`#${post.slug}`}
+                title={`${post.title} | Stupendous Web | If you want to build community, build stupendous software`}
+                key={post.ID}
+              >
                 <Text>{post.title}</Text>
               </Link>
             ))}
           </GridItem>
           <GridItem colSpan={[3, 2]}>
-            <Heading
-              as={"h1"}
-              fontSize={"1rem"}
-              fontWeight={"bold"}
-              lineHeight={2}
+            <Link
+              as={NextLink}
+              href={"/"}
+              title={
+                "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+              }
             >
-              Developer Gotchas
-            </Heading>
+              <Heading
+                as={"h1"}
+                fontSize={"1rem"}
+                fontWeight={"bold"}
+                lineHeight={2}
+                m={0}
+              >
+                Developer Gotchas
+              </Heading>
+            </Link>
+            <Text fontSize={"sm"}>
+              by&nbsp;
+              <Text as={"span"}>
+                <Link
+                  as={NextLink}
+                  href={"https://stupendousweb.com"}
+                  title={
+                    "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                  }
+                >
+                  Stupendous Web
+                </Link>
+              </Text>
+            </Text>
             {posts.map((post) => (
               <Box key={post.ID} id={post.slug}>
                 <Heading fontSize={"4rem"}>{post.title}</Heading>
