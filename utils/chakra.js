@@ -32,6 +32,7 @@ const theme = extendTheme({
       "html, body": {
         bg: "gray.50",
         color: "gray.800",
+        fontSize: 18,
         overflowX: "hidden",
         lineHeight: 2,
       },
@@ -40,9 +41,6 @@ const theme = extendTheme({
         fontWeight: "bold",
         lineHeight: 1.2,
         mb: 8,
-      },
-      h1: {
-        fontSize: "4rem",
       },
       h2: {
         fontSize: "2rem",
@@ -89,11 +87,6 @@ const theme = extendTheme({
         mb: 8,
       },
     },
-    // Text: {
-    //   baseStyle: {
-    //     mb: 4,
-    //   },
-    // },
     Link: {
       baseStyle: {
         color: "primary.500",
