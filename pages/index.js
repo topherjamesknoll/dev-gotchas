@@ -1,7 +1,15 @@
-import Link from "next/link";
 import axios from "axios";
 import Head from "next/head";
-import { Card, Grid, Page, Text } from "@geist-ui/core";
+import {
+  Box,
+  Container,
+  GridItem,
+  Heading,
+  Link,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export async function getStaticProps() {
   const posts = await axios
@@ -29,56 +37,60 @@ export default function Home({ posts }) {
           }
         />
       </Head>
-      <Page dotBackdrop w={"1600px"}>
-        <Page.Content>
-          <Grid.Container gap={2} justify={"flex-start"} w={"100%"}>
-            <Grid xs={8}>
-              <div>
-                {posts.map((post) => (
-                  <Link
-                    href={`#${post.slug}`}
-                    title={`${post.title} | Stupendous Web | If you want to build community, build stupendous software`}
-                    key={post.ID}
-                  >
-                    <Text>{post.title}</Text>
-                  </Link>
-                ))}
-              </div>
-            </Grid>
-            <Grid xs={16}>
-              <div>
+      <Container maxW={"container.xl"} py={8}>
+        <SimpleGrid columns={2} spacing={2}>
+          <GridItem colSpan={[2, 1]}>
+            {posts.map((post) => (
+              <Link
+                as={NextLink}
+                href={`#${post.slug}`}
+                title={`${post.title} | Stupendous Web | If you want to build community, build stupendous software`}
+                key={post.ID}
+              >
+                <Text>{post.title}</Text>
+              </Link>
+            ))}
+          </GridItem>
+          <GridItem colSpan={[2, 1]}>
+            <Link
+              as={NextLink}
+              href={"/"}
+              title={
+                "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+              }
+            >
+              <Heading as={"h1"} fontSize={"4rem"} mb={0}>
+                Developer Gotchas
+              </Heading>
+            </Link>
+            <Text>
+              by&nbsp;
+              <Text as={"span"}>
                 <Link
-                  href={"/"}
+                  as={NextLink}
+                  href={"https://stupendousweb.com"}
                   title={
-                    "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+                    "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
                   }
                 >
-                  <Text h1>Developer Gotchas</Text>
+                  Stupendous Web
                 </Link>
-                <Text>
-                  by&nbsp;
-                  <Text span>
-                    <Link
-                      href={"https://stupendousweb.com"}
-                      title={
-                        "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-                      }
-                    >
-                      Stupendous Web
-                    </Link>
-                  </Text>
-                </Text>
-                {posts.map((post) => (
-                  <Card key={post.ID} shadow mb={2} id={post.slug}>
-                    <Text h2>{post.title}</Text>
-                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                  </Card>
-                ))}
-              </div>
-            </Grid>
-          </Grid.Container>
-        </Page.Content>
-      </Page>
+              </Text>
+            </Text>
+            {posts.map((post) => (
+              <Box key={post.ID} id={post.slug}>
+                <Heading as={"h2"} fontSize={"2rem"}>
+                  {post.title}
+                </Heading>
+                <Box
+                  mb={4}
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
+              </Box>
+            ))}
+          </GridItem>
+        </SimpleGrid>
+      </Container>
     </>
   );
 }
