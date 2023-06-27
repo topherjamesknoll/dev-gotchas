@@ -59,7 +59,13 @@ export default function Home({ posts }) {
                 "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
               }
             >
-              <Heading as={"h1"} fontSize={"4rem"} lineHeight={1} mt={4}>
+              <Heading
+                as={"h1"}
+                fontSize={["3rem", "4rem"]}
+                lineHeight={1}
+                mt={4}
+                mb={0}
+              >
                 Developer Gotchas
               </Heading>
             </Link>
