@@ -65,12 +65,12 @@ const theme = extendTheme({
       baseStyle: {
         color: "black",
         fontWeight: "bold",
-        mb: 8,
+        my: 8,
       },
     },
     Text: {
       baseStyle: {
-        mb: 4,
+        my: 4,
       },
     },
     Link: {

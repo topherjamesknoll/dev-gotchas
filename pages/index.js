@@ -59,7 +59,7 @@ export default function Home({ posts }) {
                 "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
               }
             >
-              <Heading as={"h1"} fontSize={"4rem"} mb={0}>
+              <Heading as={"h1"} fontSize={"4rem"} lineHeight={1} mt={4}>
                 Developer Gotchas
               </Heading>
             </Link>
@@ -84,6 +84,11 @@ export default function Home({ posts }) {
                 </Heading>
                 <Box
                   mb={4}
+                  __css={{
+                    h2: { fontSize: "1rem", fontWeight: 900, my: 4 },
+                    p: { my: 4 },
+                    pre: { bg: "gray.50", color: "primary.500", p: 4 },
+                  }}
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               </Box>
