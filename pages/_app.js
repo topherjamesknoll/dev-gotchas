@@ -1,12 +1,19 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "@/utils/chakra";
-import {Analytics} from "@vercel/analytics/react";
+import { CssBaseline, GeistProvider, Themes } from "@geist-ui/core";
+import { Analytics } from "@vercel/analytics/react";
+
+export const stupendousTheme = Themes.createFromLight({
+  type: "magenta",
+  palette: {
+    link: "#d02670",
+  },
+});
 
 export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
+    <GeistProvider themes={[stupendousTheme]} themeType={"magenta"}>
+      <CssBaseline />
       <Component {...pageProps} />
-        <Analytics />
-    </ChakraProvider>
+      <Analytics />
+    </GeistProvider>
   );
 }

@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.7.0",
+    "@geist-ui/core": "^2.3.8",
     "@vercel/analytics": "^1.0.1",
     "axios": "^1.4.0",
     "eslint": "8.42.0",
