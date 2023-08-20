@@ -43,7 +43,7 @@ export default function Home({ posts }) {
             {posts.map((post) => (
               <Link
                 as={NextLink}
-                href={`#${post.slug}`}
+                href={`/articles/${post.slug}`}
                 title={`${post.title} | Stupendous Web | If you want to build community, build stupendous software`}
                 key={post.ID}
               >
@@ -93,7 +93,12 @@ export default function Home({ posts }) {
                   __css={{
                     h2: { fontSize: "1rem", fontWeight: 900, my: 4 },
                     p: { my: 4 },
-                    pre: { bg: "gray.50", color: "primary.500", p: 4 },
+                    pre: {
+                      bg: "gray.50",
+                      color: "primary.500",
+                      p: 4,
+                      overflow: "auto",
+                    },
                   }}
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />

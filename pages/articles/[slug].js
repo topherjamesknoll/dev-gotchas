@@ -1,0 +1,87 @@
+import axios from "axios";
+import Head from "next/head";
+import { Box, Container, Heading, Link, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
+
+export async function getStaticPaths() {
+  const posts = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/220124193/posts"
+    )
+  ).data?.posts;
+  console.log("posts", posts);
+  const paths = posts?.map((post) => ({
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const post = (
+    await axios.get(
+      `https://public-api.wordpress.com/rest/v1.1/sites/220124193/posts/slug:${params.slug}`
+    )
+  ).data;
+
+  return {
+    props: {
+      article: post,
+    },
+    revalidate: 10,
+  };
+}
+
+export default function Article({ article }) {
+  return (
+    <>
+      <Head>
+        <title>{article.title} | Dev Gotchas | Stupendous Web</title>
+        <meta
+          property={"og:title"}
+          content={`${article.title} | Dev Gotchas | Stupendous Web`}
+        />
+      </Head>
+      <Container maxW={"container.sm"} py={8}>
+        <Link
+          as={NextLink}
+          href={"/"}
+          title={
+            "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+          }
+        >
+          <Heading as={"p"} fontSize={"1rem"} mt={4} mb={0}>
+            Developer Gotchas
+          </Heading>
+        </Link>
+        <Text>
+          by&nbsp;
+          <Text as={"span"}>
+            <Link
+              as={NextLink}
+              href={"https://stupendousweb.com"}
+              title={
+                "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+              }
+            >
+              Stupendous Web
+            </Link>
+          </Text>
+        </Text>
+        <Heading as={"h1"}>{article.title}</Heading>
+        <Box
+          __css={{
+            h2: { fontWeight: 900, my: 4 },
+            pre: {
+              bg: "gray.50",
+              color: "primary.500",
+              p: 4,
+              overflow: "auto",
+            },
+          }}
+          dangerouslySetInnerHTML={{ __html: article.content }}
+        />
+      </Container>
+    </>
+  );
+}
