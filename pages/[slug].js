@@ -68,10 +68,17 @@ export default function Article({ article }) {
             </Link>
           </Text>
         </Text>
-        <Heading as={"h1"}>{article.title}</Heading>
+        <Heading
+          as={"h1"}
+          dangerouslySetInnerHTML={{ __html: article.title }}
+        />
         <Box
           __css={{
             h2: { fontWeight: 900, my: 4 },
+            p: { my: 4 },
+            a: {
+              color: "primary.500",
+            },
             pre: {
               bg: "gray.50",
               color: "primary.500",
