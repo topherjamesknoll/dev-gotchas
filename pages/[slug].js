@@ -36,10 +36,10 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        <title>{article.title} | Dev Gotchas | Stupendous Web</title>
+        <title>{article.title} | Dev Gotchas</title>
         <meta
           property={"og:title"}
-          content={`${article.title} | Dev Gotchas | Stupendous Web`}
+          content={`${article.title} | Dev Gotchas`}
         />
       </Head>
       <Container maxW={"container.sm"} py={8}>
@@ -47,7 +47,7 @@ export default function Article({ article }) {
           as={NextLink}
           href={"/"}
           title={
-            "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+            "Dev Gotchas | If you want to build community, build stupendous software"
           }
         >
           <Heading as={"p"} fontSize={"1rem"} mt={4} mb={0}>
@@ -59,12 +59,9 @@ export default function Article({ article }) {
           <Text as={"span"}>
             <Link
               as={NextLink}
-              href={"https://stupendousweb.com"}
-              title={
-                "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-              }
+              href={"https://www.linkedin.com/in/topherjamesknoll"}
             >
-              Stupendous Web
+              Topher
             </Link>
           </Text>
         </Text>

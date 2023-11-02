@@ -27,13 +27,13 @@ export default function Home({ posts }) {
     <>
       <Head>
         <title>
-          Dev Gotchas | Stupendous Web | If you want to build community, build
-          stupendous software
+          Dev Gotchas | If you want to build community, build stupendous
+          software
         </title>
         <meta
           property={"og:title"}
           content={
-            "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+            "Dev Gotchas | If you want to build community, build stupendous software"
           }
         />
       </Head>
@@ -45,7 +45,7 @@ export default function Home({ posts }) {
                 <Link
                   as={NextLink}
                   href={`/${post.slug}`}
-                  title={`${post.title} | Stupendous Web | If you want to build community, build stupendous software`}
+                  title={`${post.title} | If you want to build community, build stupendous software`}
                   key={post.ID}
                 >
                   <Text dangerouslySetInnerHTML={{ __html: post.title }} />
@@ -58,7 +58,7 @@ export default function Home({ posts }) {
               as={NextLink}
               href={"/"}
               title={
-                "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+                "Dev Gotchas | If you want to build community, build stupendous software"
               }
             >
               <Heading
@@ -76,12 +76,9 @@ export default function Home({ posts }) {
               <Text as={"span"}>
                 <Link
                   as={NextLink}
-                  href={"https://stupendousweb.com"}
-                  title={
-                    "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-                  }
+                  href={"https://www.linkedin.com/in/topherjamesknoll"}
                 >
-                  Stupendous Web
+                  Topher
                 </Link>
               </Text>
             </Text>
@@ -90,7 +87,7 @@ export default function Home({ posts }) {
                 <Link
                   as={NextLink}
                   href={`/${post.slug}`}
-                  title={`${post.title} | Stupendous Web | If you want to build community, build stupendous software`}
+                  title={`${post.title} | If you want to build community, build stupendous software`}
                   key={post.ID}
                 >
                   <Heading

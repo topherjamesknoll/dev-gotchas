@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     window.location.hostname === "devgotchas.com" && setIsProduction(true);
     console.log(
-      "%c🤯 DEV GOTCHAS\ntopher@stupendousweb.com\n",
+      "%c🤯 DEV GOTCHAS\ntopherjamesknoll@gmail.com\n",
       "color: #d02670"
     );
   }, []);
