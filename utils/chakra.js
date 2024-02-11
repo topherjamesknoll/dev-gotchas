@@ -1,4 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
+import { Montserrat, Source_Code_Pro } from "next/font/google";
+
+const libreFranklin = Montserrat({ subsets: ["latin"] });
+const sourceCodePro = Source_Code_Pro({ subsets: ["latin"] });
 
 const theme = extendTheme({
   colors: {
@@ -48,12 +52,9 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: "transducer, sans-serif",
-    body: "transducer, sans-serif",
-    mono: "anonymous-pro, monospace",
-  },
-  fontWeights: {
-    bold: 900,
+    heading: libreFranklin.style.fontFamily,
+    body: libreFranklin.style.fontFamily,
+    mono: sourceCodePro.style.fontFamily,
   },
   sizes: {
     container: {
@@ -64,7 +65,6 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         color: "black",
-        fontWeight: "bold",
         my: 8,
       },
     },
