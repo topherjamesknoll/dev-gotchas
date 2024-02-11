@@ -1,4 +1,5 @@
-import { useTheme } from "@geist-ui/core";
+import { Text, useTheme } from "@geist-ui/core";
+import Link from "next/link";
 
 const Layout = ({ children }) => {
   const theme = useTheme();
@@ -17,26 +18,42 @@ const Layout = ({ children }) => {
           color: theme.palette.background,
           display: "flex",
           alignItems: "center",
-          padding: "1rem 2rem",
         }}
       >
-        Development Gotchas
+        <div
+          style={{
+            width: "1000px",
+            margin: "0 auto",
+            padding: "1rem 2rem",
+          }}
+        >
+          <Text span b>
+            Development Gotchas
+          </Text>
+          <Text span>
+            {" "}
+            by{" "}
+            <Link href={"https://www.linkedin.com/in/topherjamesknoll"}>
+              Topher
+            </Link>
+          </Text>
+        </div>
       </nav>
-      <div
+      <main
         style={{
           overflowY: "auto",
         }}
       >
         <div
           style={{
-            maxWidth: "1000px",
-            padding: "4rem 2rem",
+            width: "1000px",
             margin: "0 auto",
+            padding: "4rem 2rem",
           }}
         >
           {children}
         </div>
-      </div>
+      </main>
     </div>
   );
 };
