@@ -8,9 +8,28 @@ export default function Home() {
       title: "Deploying a NextJS App with AWS Elastic Beanstalk and GitLab",
       slug: "deploying-a-nextjs-app-with-aws-elastic-beanstalk-and-gitlab",
     },
-    { title: "1" },
-    { title: "1" },
-    { title: "1" },
+    {
+      title: "My Favorite Expo and EAS Commands for React Native Development",
+      slug: "my-favorite-expo-and-eas-commands-for-react-native-development",
+    },
+    {
+      title: "Before Running Zend on a Mac in the 21st Century",
+      slug: "before-running-zend-on-a-mac-in-the-21st-century",
+    },
+    {
+      title:
+        "Before you Transfer your MySQL Database to Digital Ocean Managed MySQL",
+      slug: "before-you-transfer-your-mysql-database-to-digital-oceans-managed-mysql",
+    },
+    {
+      title: "How to Deploy an Express App to Vercel",
+      slug: "how-to-deploy-an-express-app-to-vercel",
+    },
+    {
+      title:
+        "Before you get Started with Firebase Storage Inside your NextJS App",
+      slug: "before-you-get-started-with-firebase-storage-inside-your-nextjs-app",
+    },
   ];
   return (
     <Layout>
