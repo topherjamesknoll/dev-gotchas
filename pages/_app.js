@@ -2,6 +2,7 @@ import Script from "next/script";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { GeistProvider, CssBaseline } from "@geist-ui/core";
+import theme from "@/utils/theme";
 
 export default function App({ Component, pageProps }) {
   const [isProduction, setIsProduction] = useState(false);
@@ -37,7 +38,7 @@ export default function App({ Component, pageProps }) {
         )}
         <meta name={"viewport"} content={"width=device-width"} />
       </Head>
-      <GeistProvider>
+      <GeistProvider themes={[theme]}>
         <CssBaseline />
         <Component {...pageProps} />
       </GeistProvider>
