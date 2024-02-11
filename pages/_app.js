@@ -1,8 +1,7 @@
-import { ChakraBaseProvider } from "@chakra-ui/react";
-import theme from "@/utils/chakra";
 import Script from "next/script";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { GeistProvider, CssBaseline } from "@geist-ui/core";
 
 export default function App({ Component, pageProps }) {
   const [isProduction, setIsProduction] = useState(false);
@@ -11,7 +10,7 @@ export default function App({ Component, pageProps }) {
     window.location.hostname === "devgotchas.com" && setIsProduction(true);
     console.log(
       "%c🤯 DEV GOTCHAS\ntopherjamesknoll@gmail.com\n",
-      "color: #d02670"
+      "color: #d02670",
     );
   }, []);
 
@@ -38,9 +37,10 @@ export default function App({ Component, pageProps }) {
         )}
         <meta name={"viewport"} content={"width=device-width"} />
       </Head>
-      <ChakraBaseProvider theme={theme}>
+      <GeistProvider>
+        <CssBaseline />
         <Component {...pageProps} />
-      </ChakraBaseProvider>
+      </GeistProvider>
     </div>
   );
 }

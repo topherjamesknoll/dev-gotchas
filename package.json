@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@geist-ui/core": "^2.3.8",
     "axios": "^1.6.7",
     "eslint": "8.42.0",
     "eslint-config-next": "^14.1.0",
