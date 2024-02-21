@@ -17,7 +17,6 @@ export default function HowToAutomaticallyUpdateUsersToTheLatestVersionOfYourExp
           How to Automatically Update Users to the Latest Version of your Expo
           App
         </Text>
-        <Text h2>IAM</Text>
         <Text>
           The eas-cli tool offers a really great way to make live updates to
           your app. Say you squash a bug and want to publish the changes to
