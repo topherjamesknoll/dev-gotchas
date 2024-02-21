@@ -7,8 +7,8 @@ export default function MyFavoriteExpoAndEasCommandsForReactNativeDevelopment() 
     <>
       <Head>
         <title>
-          My Favorite Expo and EAS Commands for React Native Development | Dev
-          Gotchas
+          My Favorite Expo and EAS Commands for React Native Development |
+          Development Gotchas by Topher
         </title>
       </Head>
       <Layout>

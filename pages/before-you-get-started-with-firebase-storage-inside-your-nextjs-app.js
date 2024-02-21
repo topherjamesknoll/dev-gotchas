@@ -8,7 +8,7 @@ export default function BeforeYouGetStartedWithFirebaseStorageInsideYourNextjsAp
       <Head>
         <title>
           Before you get Started with Firebase Storage inside your NextJS App |
-          Dev Gotchas
+          Development Gotchas by Topher
         </title>
       </Head>
       <Layout>

@@ -6,7 +6,9 @@ export default function HowToDeployAnExpressAppToVercel() {
   return (
     <>
       <Head>
-        <title>How to Deploy an Express App to Vercel | Dev Gotchas</title>
+        <title>
+          How to Deploy an Express App to Vercel | Development Gotchas by Topher
+        </title>
       </Head>
       <Layout>
         <Text h1>How to Deploy an Express App to Vercel</Text>

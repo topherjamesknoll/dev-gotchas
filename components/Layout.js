@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         height: "100vh",
         display: "grid",
         gridTemplateAreas: "'nav' 'main'",
-        gridTemplateRows: "56px auto",
+        gridTemplateRows: "56px auto"
       }}
     >
       <nav
@@ -17,18 +17,20 @@ const Layout = ({ children }) => {
           backgroundColor: theme.palette.foreground,
           color: theme.palette.background,
           display: "flex",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <div
           style={{
             width: "1000px",
             margin: "0 auto",
-            padding: "1rem 2rem",
+            padding: "1rem 2rem"
           }}
         >
           <Text span b>
-            Development Gotchas
+            <Link href={"/"} title={"Development Gotchas by Topher"}>
+              Development Gotchas
+            </Link>
           </Text>
           <Text span>
             {" "}
@@ -41,14 +43,14 @@ const Layout = ({ children }) => {
       </nav>
       <main
         style={{
-          overflowY: "auto",
+          overflowY: "auto"
         }}
       >
         <div
           style={{
             width: "1000px",
             margin: "0 auto",
-            padding: "4rem 2rem",
+            padding: "4rem 2rem"
           }}
         >
           {children}

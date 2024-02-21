@@ -7,7 +7,8 @@ export default function BeforeRunningZendOnAMacInThe21stCentury() {
     <>
       <Head>
         <title>
-          Before Running Zend on a Mac in the 21st Century | Dev Gotchas
+          Before Running Zend on a Mac in the 21st Century | Development Gotchas
+          by Topher
         </title>
       </Head>
       <Layout>

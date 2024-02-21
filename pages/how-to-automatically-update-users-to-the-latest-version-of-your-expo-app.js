@@ -9,7 +9,7 @@ export default function HowToAutomaticallyUpdateUsersToTheLatestVersionOfYourExp
       <Head>
         <title>
           How to Automatically Update Users to the Latest Version of your Expo
-          App
+          App | Development Gotchas by Topher
         </title>
       </Head>
       <Layout>

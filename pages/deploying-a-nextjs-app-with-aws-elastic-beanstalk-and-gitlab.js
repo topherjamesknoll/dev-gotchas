@@ -7,8 +7,8 @@ export default function DeployingANextJSAppWithAWSElasticBeanstalkAndGitLab() {
     <>
       <Head>
         <title>
-          Deploying a NextJS App with AWS Elastic Beanstalk and GitLab | Dev
-          Gotchas
+          Deploying a NextJS App with AWS Elastic Beanstalk and GitLab |
+          Development Gotchas by Topher
         </title>
       </Head>
       <Layout>

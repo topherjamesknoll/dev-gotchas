@@ -8,7 +8,7 @@ export default function BeforeYouTransferYourMysqlDatabaseToDigitalOceansManaged
       <Head>
         <title>
           Before you Transfer your MySQL Database to Digital Ocean Managed MySQL
-          | Dev Gotchas
+          | Development Gotchas by Topher
         </title>
       </Head>
       <Layout>
