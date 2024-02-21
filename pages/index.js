@@ -5,6 +5,11 @@ import Link from "next/link";
 export default function Home() {
   const articles = [
     {
+      title:
+        "How to Automatically Update Users to the Latest Version of your Expo App",
+      slug: "how-to-automatically-update-users-to-the-latest-version-of-your-expo-app",
+    },
+    {
       title: "Deploying a NextJS App with AWS Elastic Beanstalk and GitLab",
       slug: "deploying-a-nextjs-app-with-aws-elastic-beanstalk-and-gitlab",
     },
